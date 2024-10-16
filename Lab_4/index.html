@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Моя перша HTML-форма</h1>
+    <form action="https://httpbin.org/get" method="GET">
+      <!-- Використання id для зв'язку з label -->
+      <label for="name">Ім'я:</label>
+      <input type="text" id="name" name="username" required />
+      <br /><br />
+
+      <!-- Використання простого огортання input в label -->
+      <label
+        >Дата народження:
+        <input type="date" name="birthdate" required />
+      </label>
+      <br /><br />
+
+      <label for="email">Імейл:</label>
+      <input type="email" id="email" name="useremail" required />
+      <br /><br />
+
+      <label for="message">Повідомлення:</label>
+      <textarea id="message" name="usermessage" rows="4" required></textarea>
+      <br /><br />
+
+      <!-- Чекбокси: Ваші улюблені напої -->
+      <label>Ваші улюблені напої:</label><br />
+      <label><input type="checkbox" name="drink" value="coffee" /> Кава</label
+      ><br />
+      <label><input type="checkbox" name="drink" value="tea" /> Чай</label
+      ><br />
+      <label><input type="checkbox" name="drink" value="juice" /> Сік</label
+      ><br />
+      <label><input type="checkbox" name="drink" value="water" /> Вода</label>
+      <br /><br />
+
+      <!-- Радіокнопки: Моя національність -->
+      <label>Моя національність:</label><br />
+      <label
+        ><input type="radio" name="nationality" value="ukrainian" required />
+        Українець</label
+      ><br />
+      <label
+        ><input type="radio" name="nationality" value="polish" /> Поляк</label
+      ><br />
+      <label
+        ><input type="radio" name="nationality" value="hungarian" />
+        Угорець</label
+      >
+      <br /><br />
+
+      <!-- Кнопки для відправки та очищення форми -->
+      <input type="submit" value="Надіслати" />
+      <input type="reset" value="Очистити" />
+
+      <picture>
+        <!-- Зображення для мобільних пристроїв з шириною менше 468px -->
+        <source
+          media="(max-width: 468px)"
+          srcset="https://picsum.photos/300/500"
+        />
+        <!-- Зображення для ширших екранів -->
+        <source
+          media="(min-width: 469px)"
+          srcset="https://picsum.photos/1000/400"
+        />
+        <!-- Виведення зображення за замовчуванням, якщо не спрацювали media-умови -->
+        <img src="https://picsum.photos/1000/400" alt="Адаптивне зображення" />
+      </picture>
+    </form>
+  </body>
+</html>
